@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# React Native
+.expo/*
+*.jks
+*.p12
+*.key
+*.mobileprovision
