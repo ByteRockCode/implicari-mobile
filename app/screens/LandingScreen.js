@@ -17,7 +17,7 @@ export default class LandingScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Implicari</Text>
+        <Text style={styles.title}>Implicari :D</Text>
 
         <View>
           <Button

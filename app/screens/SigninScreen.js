@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
+
+import { TextInput } from '../../byterock-theme';
 
 
 export default class SigninScreen extends React.Component {
@@ -8,10 +10,7 @@ export default class SigninScreen extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      author: '',
-      quote: '',
-    };
+    this.state = {};
   }
 
   onPressSignin() {
@@ -22,21 +21,19 @@ export default class SigninScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.row}>
-          <Text>Correo</Text>
+          <Text style={styles.label}>Correo</Text>
 
           <TextInput
-              onChangeText={(text) => this.setState({email: text})}
-              style={styles.input}
+              onChangeText={(email) => this.setState({email})}
               value={this.state.email}
           />
         </View>
 
         <View style={styles.row}>
-          <Text>Contraseña</Text>
+          <Text style={styles.label}>Contraseña</Text>
 
           <TextInput
-              onChangeText={(text) => this.setState({password: text})}
-              style={styles.input}
+              onChangeText={(password) => this.setState({password})}
               value={this.state.password}
           />
         </View>
@@ -62,15 +59,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     padding: 20,
   },
-  row: {
-    marginBottom: 20,
-  },
-  input: {
-    borderColor: '#343a40',
-    borderWidth: 1,
-    padding: 5,
+  label: {
+    marginBottom: 10,
   },
   margin: {
     height: 40,
+  },
+  row: {
+    marginBottom: 20,
   },
 });
